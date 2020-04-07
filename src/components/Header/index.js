@@ -5,11 +5,23 @@ import { PageContext } from '../../context'
 import Logo from '../../assets/images/Logo'
 import Social from '../SocialBar'
 import { HeaderWrapper, Container, MainNav, CallButton, TrayOpener } from './styles'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import { FaAlignRight } from 'react-icons/fa'
 
+
 const Header = () =>{
+  const {allContentfulMenu} = useStaticQuery(graphql`
+    query{
+      allContentfulMenu{
+        edges{
+          node{
+            items
+          }
+        }
+      }
+    }
+  `)
   const { nav, setNav } = useContext(PageContext)
   return(
     <HeaderWrapper>
@@ -21,21 +33,17 @@ const Header = () =>{
         <div className="navWrapper">
           <MainNav>
             <ul>
-              <li>
-                <Link to='/' activeClassName="active-item">Home</Link>
-              </li>
-              <li>
-                <Link to='/about' activeClassName="active-item">About Us</Link>
-              </li>
-              <li>
-                <Link to='/services' activeClassName="active-item">Services</Link>
-              </li>
-              <li>
-                <Link to='/projects' activeClassName="active-item">Projects</Link>
-              </li>
-              <li>
-                <Link to='/contact' activeClassName="active-item">Contact</Link>
-              </li>
+              { allContentfulMenu.edges[0].node.items.map((item)=>{
+                return(
+                  <li  key={item} >
+                    { item === 'Home' ?
+                      <Link to='/' activeClassName="active-item">{item}</Link>
+                     :
+                      <Link to={`${item.toLowerCase()}`} activeClassName="active-item">{item}</Link>
+                     }
+                  </li>
+                )
+              })}
             </ul>
           </MainNav>
           <CallButton href="tel:+19785965350" className="box-shadow">Call Us</CallButton>
