@@ -41,7 +41,7 @@ const Header = () =>{
           <CallButton href="tel:+19785965350" className="box-shadow">Call Us</CallButton>
         </div>
       <TrayOpener>
-        <button type="button" onClick={() => { setNav(!nav);}}>
+        <button type="button" onClick={() => { setNav(!nav) }}>
           <FaAlignRight size={20} color={"#333"}/>
         </button>
       </TrayOpener>

@@ -3,7 +3,7 @@ import { PageContext } from '../../context'
 import { Container } from './styles'
 
 const MobileNav = () =>{
-  const { nav, setNav, disabled } = useContext(PageContext)
+  const { nav, setNav } = useContext(PageContext)
  
   let open = nav
   useEffect(()=>{
@@ -18,7 +18,7 @@ const MobileNav = () =>{
   }
 
   return(
-    <Container mobile={open} disabled={disabled}>
+    <Container mobile={open} disabled={!open}>
       Mobile Nav
       <h1 onClick={()=> {closeNav();}}>Close</h1>
     </Container>
