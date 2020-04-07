@@ -12,6 +12,7 @@ export const Container = styled.section`
   right: ${props => props.mobile ? "0": "-100%"};
   transition: all 0.5s ease-in;
   justify-content: center;
+  align-items: center;
   button{
     background: none;
     outline: 0;
@@ -54,5 +55,24 @@ export const MainNav = styled.nav`
         color: #003D7A;
       }
     }
+  }
+`
+
+export const CallButton = styled.a`
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  color: #fff;
+  background-color: #003D7A;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  margin-bottom: 30px;
+
+  &:hover{
+    background: #3680A6;
   }
 `
