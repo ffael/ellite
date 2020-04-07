@@ -4,6 +4,7 @@ export const Container = styled.section`
   display: flex;
   background: #fafafa;
   user-select: none;
+  overflow: hidden !important;
 
   h1{
     position: absolute;
@@ -13,6 +14,11 @@ export const Container = styled.section`
     font-style: italic;
     text-transform: uppercase;
     color: #EDEDED;
+
+    @media(max-width: 950px){
+      font-size: 20vw;
+      left: 10px;
+    }
   }
 `
 
@@ -22,6 +28,11 @@ export const Content = styled.article`
   grid-template-rows: ${props => props.mainPage ? "1fr 250px" : ""};
   ${props=> props.mainPage !== true ? `grid-row-gap: 40px` : ""};
   grid-template-columns: ${props => props.mainPage ? "repeat(3, 1fr)" : "repeat(2, 1fr)"};
+  
+  @media(max-width: 950px){
+    display: inline-block;
+    text-align: center;
+  }
 `
 
 export const Card = styled.article`
@@ -61,6 +72,31 @@ export const Card = styled.article`
     margin: 0;
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  @media(max-width: 1500px){
+    div{
+      height: 300px;
+      .icon{
+        top: calc(300px - 45px);
+      }
+    }
+  }
+  @media(max-width: 1200px){
+    div{
+      height: 200px;
+      .icon{
+       top: calc(200px - 45px);
+      }
+    }    
+  }
+  @media(max-width: 950px){
+    margin-bottom: 50px;
+    div{
+      .icon{
+        display: none;
+      }
+    }
   }
 `
 
