@@ -8,6 +8,10 @@ export const Container = styled.section`
   align-items: center;
   background-color: #003D7A;
   border-top: 10px solid #FFCB65;
+  
+  @media(max-width: 750px){
+    height: 180px;
+  }
 `
 
 export const Content = styled.article`
@@ -19,6 +23,17 @@ export const Content = styled.article`
   justify-content: space-between;
   align-items: center;
   flex: 1;
+
+  @media(max-width: 1200px){
+    text-align: center;
+    font-size: 1rem;
+  }
+  @media(max-width: 750px){
+    p{
+      margin-top: 0;
+    }
+    flex-direction: column;
+  }
 `
 
 export const CallButton = styled.div`
@@ -37,6 +52,12 @@ export const CallButton = styled.div`
     &:hover{
       color: #333;
       background: #777;
+    }
+  }
+  @media(max-width: 750px){
+    a{
+      padding: 0 20px;
+      font-size: 11px;
     }
   }
   height: 50px;

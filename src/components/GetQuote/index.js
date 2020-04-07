@@ -10,7 +10,7 @@ const GetQuote = () =>{
         <p>Fast and Reliable Services You Can Trust.</p>
         <CallButton className="box-shadow">
           <Link to='/'>Get a Quote</Link>
-          </CallButton>
+        </CallButton>
       </Content>
     </Container>
   )
