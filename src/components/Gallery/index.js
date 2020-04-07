@@ -33,13 +33,15 @@ const Gallery = (props) =>{
       return
     }else{
       return(
-        <Carousel {...settings} style={ (props.border === true) ? {borderBottom: "20px solid #FFCB65"} : ""}>
-          {props.gallery.map((item)=>{
-            return(
-              <Img key={item.id} fluid={item.fluid} style={{height:"100%", width: "100%", maxHeight: `${props.maxHeight}px`}}/>
-            )
-          })}
-        </Carousel>
+        <section style={{marginTop: 100}}>
+          <Carousel {...settings} style={ (props.border === true) ? {borderBottom: "20px solid #FFCB65"} : ""}>
+            {props.gallery.map((item)=>{
+              return(
+                <Img key={item.id} fluid={item.fluid} style={{height:"100%", width: "100%", maxHeight: `${props.maxHeight}px`}}/>
+              )
+            })}
+          </Carousel>
+        </section>
       )
     }
   }
@@ -48,7 +50,11 @@ const Gallery = (props) =>{
     if(props.featuredImage === null){
       return
     }
-    return <Img key={props.featuredImage.id} fluid={props.featuredImage.fluid} style={{height:"100%", width: "100%", maxHeight: `${props.maxHeight}px`}}/>
+    return (
+      <section style={{marginTop: 100}}>
+        <Img key={props.featuredImage.id} fluid={props.featuredImage.fluid} style={{height:"100%", width: "100%", maxHeight: `${props.maxHeight}px`}}/>
+      </section>
+    )
   }
 
   return(

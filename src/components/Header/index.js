@@ -4,7 +4,7 @@ import { PageContext } from '../../context'
 
 import Logo from '../../assets/images/Logo'
 import Social from '../SocialBar'
-import { Container, MainNav, CallButton, TrayOpener } from './styles'
+import { HeaderWrapper, Container, MainNav, CallButton, TrayOpener } from './styles'
 import { Link } from 'gatsby'
 
 import { FaAlignRight } from 'react-icons/fa'
@@ -12,7 +12,7 @@ import { FaAlignRight } from 'react-icons/fa'
 const Header = () =>{
   const { nav, setNav } = useContext(PageContext)
   return(
-    <header>
+    <HeaderWrapper>
       <Social />
       <Container className="grid">
         <Link to="/">
@@ -46,7 +46,7 @@ const Header = () =>{
         </button>
       </TrayOpener>
       </Container>
-    </header>
+    </HeaderWrapper>
   )
 }
 

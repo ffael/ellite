@@ -36,6 +36,7 @@ const HeroPage = () =>{
   })
 
   return(
+    <section style={{marginTop: 150}}>
     <Parallax
       blur={2}
       bgImage={bg}
@@ -48,6 +49,7 @@ const HeroPage = () =>{
         </Content>
       </Container>
     </Parallax>
+    </section>
   )
 }
 
