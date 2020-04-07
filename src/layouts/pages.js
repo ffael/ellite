@@ -5,7 +5,6 @@ import { PageContext } from '../context'
 import GlobalStyles from '../styles/global'
 import Helmet from 'react-helmet'
 import MobileNav from '../components/MobileNav'
-import SocialBar from '../components/SocialBar'
 import Header from '../components/Header'
 import HeroPage from '../components/HeroPage'
 import Footer from '../components/Footer'
@@ -32,7 +31,6 @@ const Layout = ({children, title, main, fileName}) =>{
         </Helmet>
         <MobileNav />
         <GlobalStyles />
-        <SocialBar />
         <Header />
         <HeroPage />
         <main>

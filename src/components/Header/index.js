@@ -3,6 +3,7 @@ import React, {useContext} from 'react'
 import { PageContext } from '../../context'
 
 import Logo from '../../assets/images/Logo'
+import Social from '../SocialBar'
 import { Container, MainNav, CallButton, TrayOpener } from './styles'
 import { Link } from 'gatsby'
 
@@ -12,6 +13,7 @@ const Header = () =>{
   const { nav, setNav } = useContext(PageContext)
   return(
     <header>
+      <Social />
       <Container className="grid">
         <Link to="/">
           <Logo className="logo" fill={"#002f7a"} bleed={"#fff"}/>
