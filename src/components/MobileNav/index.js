@@ -1,26 +1,44 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { PageContext } from '../../context'
-import { Container } from './styles'
+import { Container, MainNav } from './styles'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+
+import { FaRegWindowClose } from 'react-icons/fa'
 
 const MobileNav = () =>{
   const { nav, setNav } = useContext(PageContext)
- 
-  let open = nav
-  useEffect(()=>{
-    open = nav
-  }, [nav])
-
-  function closeNav(){
-    setNav(!nav)
-    setTimeout(()=>{
-      // alert("Should be display:none!")
-    }, 1000)
-  }
+  const {allContentfulMenu} = useStaticQuery(graphql`
+    query{
+      allContentfulMenu{
+        edges{
+          node{
+            items
+          }
+        }
+      }
+    }
+  `)
 
   return(
-    <Container mobile={open} disabled={!open}>
-      Mobile Nav
-      <h1 onClick={()=> {closeNav();}}>Close</h1>
+    <Container mobile={nav}>
+     <MainNav>
+       <ul>
+        { allContentfulMenu.edges[0].node.items.map((item)=>{
+            return(
+              <li  key={item} >
+                { item === 'Home' ?
+                  <Link to='/' activeClassName="active-item">{item}</Link>
+                  :
+                  <Link to={`${item.toLowerCase()}`} activeClassName="active-item">{item}</Link>
+                  }
+              </li>
+            )
+          })}
+       </ul>
+     </MainNav>
+      <button type="button" onClick={()=> { setNav(false) }}>
+        <FaRegWindowClose size={30} />
+      </button>
     </Container>
   )
 }
