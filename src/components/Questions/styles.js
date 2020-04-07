@@ -6,6 +6,10 @@ export const Container = styled.section`
   background-size: cover;
   height: 70vh;
   position: relative;
+
+  @media(max-width: 700px){
+    height: 85vh;
+  }
 `
 
 export const Content = styled.article`
@@ -50,6 +54,30 @@ export const Content = styled.article`
       grid-column:2;
       resize: none;
 
+    }
+  }
+
+  @media(max-width: 820px){
+    h3{
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    form{
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 700px){
+    form{
+      display: flex;
+      flex-direction: column;
+
+      input{
+        margin-bottom: 10px;
+      }
+      textarea{
+        height: 80px;
+      }
     }
   }
 `
