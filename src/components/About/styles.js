@@ -13,30 +13,38 @@ export const Container = styled.section`
     text-transform: uppercase;
     color: #EDEDED;
     user-select: none;
+
+    @media(max-width: 950px){
+      font-size: 20vw;
+      left: 10px;
+    }
   }
 `
 
 export const Content = styled.article`
   margin-top: 50px;
-  display: grid;
-  grid-column-gap: 50px;
-  grid-template-rows: 1fr 250px;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
   align-items: center;
 
   div{
-    grid-column-start: 2;
-    grid-column-end: 4;
-
+    background: #fafafa;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     p{
-      line-height: 50px;
-      margin: 0;
+      line-height: 30px;
+      margin: 0 0 50px 0;
     }
+  }
+  @media(max-width:1000px){
+    flex-direction: column;
   }
 `
 
 export const Card = styled.article`
-  margin: 0 20px;
   padding: 20px 20px;
   background: #fff;
   display: flex;
@@ -53,6 +61,23 @@ export const Card = styled.article`
     width: 400px;
     margin-bottom: 10px;
     border-bottom: 10px solid #FFCB65;
+  }
+
+  @media(max-width: 1100px){
+    picture{
+      width: 300px;
+    }
+  }
+  @media(max-width: 1000px){
+    picture{
+      height: 300px;
+    }
+  }
+  @media(max-width: 400px){
+    picture{
+      width: 200px;
+      height: 200px;
+    }
   }
 `
 
@@ -77,6 +102,13 @@ export const CallForActionBtn = styled.button`
     &:hover{
       color: #333;
       background: #777;
+    }
+  }
+
+  @media(max-width: 400px){
+    a{
+     font-size: 0.6875rem;
+     padding: 15px 35px;
     }
   }
 `

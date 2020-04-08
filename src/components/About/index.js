@@ -27,13 +27,13 @@ const About = ({mainPage = true}) =>{
         </Card>
         <div>
           <p>{data.contentfulAbout.description.description}</p>
+          { mainPage ?
+            <CallForActionBtn>
+              <Link className="box-shadow" to='/about'>Get to Know Us</Link>
+            </CallForActionBtn>
+            : ""
+          }
         </div>
-        { mainPage ?
-          <CallForActionBtn>
-            <Link className="box-shadow" to='/about'>Get to Know Us</Link>
-          </CallForActionBtn>
-          : ""
-        }
       </Content>
     </Container>
   )
