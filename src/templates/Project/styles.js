@@ -56,6 +56,26 @@ export const Content = styled.article`
     }
     
   }
+
+  @media(max-width: 900px){
+    .title{
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 25px;
+      h3{
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+        margin: 10px 0;
+      }
+    }
+    .info{
+      font-size: 0.775rem;
+      margin-bottom: 40px;
+    }
+    .description{
+      line-height: 30px;
+    }
+  }
   
 `
 
@@ -63,10 +83,8 @@ export const CallForActionBtn = styled.button`
   background: none;
   outline:none;
   border: none;
-  /* display: ${props => props.visible ? "block": "none"}; */
 
   a{
-    /* display: ${props => props.visible ? "inline-block": "none"}; */
     background:#FFCB65;
     padding: 20px 40px;
     text-decoration: none;
@@ -79,6 +97,14 @@ export const CallForActionBtn = styled.button`
     &:hover{
       color: #333;
       background: #777;
+    }
+  }
+
+  @media(max-width:900px){
+    padding: 0;
+    a{
+      font-size: 0.825rem;
+      padding: 10px 20px;
     }
   }
 `
