@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const Container = styled.section`
   display: flex;
   background: #fafafa;
+ 
+  @media(max-width: 950px){
+    flex-direction: column;
+  }
 `
 export const Info = styled.article`
   display: flex;
@@ -32,18 +36,15 @@ export const FormWrapper = styled.article`
   padding: 40px 60px;
 
   form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
     section{
       display: flex;
       label[for="state"]{
         margin-left: 40px;
       }
-
     }
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(6, 60px);
 
     textarea{
       resize: none;
@@ -80,6 +81,15 @@ export const FormWrapper = styled.article`
       border: 0;
       outline: 0;
       border: 1px solid #333;
+    }
+  }
+  @media(max-width: 950px){
+    order: 1;
+    margin-top: 40px;
+    padding: 20px 30px 50px 30px;
+    form{
+      width: 100%;
+      min-width: 80%;
     }
   }
 `

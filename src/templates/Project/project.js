@@ -6,7 +6,6 @@ import { PageContext } from '../../context'
 import { FaArrowLeft, FaLocationArrow, FaCalendar } from 'react-icons/fa'
 import { Container, Content, CallForActionBtn } from './styles'
 
-import SocialBar from '../../components/SocialBar'
 import Header from '../../components/Header'
 import MobileNav from '../../components/MobileNav'
 import Gallery from '../../components/Gallery'
