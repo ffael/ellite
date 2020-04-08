@@ -32,7 +32,7 @@ export const MainNav = styled.nav`
   color: #333;
   ul{ 
     flex-direction: column;
-    font-size: 2rem;
+    font-size: 1.8rem;
     list-style: none;
     padding: 0;
     display: flex;
@@ -41,7 +41,7 @@ export const MainNav = styled.nav`
 
     li{
       display: flex;
-      padding: 20px 40px;
+      padding: 10px 40px;
     }
 
     a{

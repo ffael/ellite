@@ -8,6 +8,9 @@ export const Container = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
+  @media(max-width: 1000px){
+    height: 300px;
+  }
 `
 
 export const Content = styled.article`
@@ -28,5 +31,28 @@ export const Content = styled.article`
   }
   p{
     font-size: 1.5rem;
+  }
+
+  @media(max-width: 1000px){
+    flex-direction: column;
+    h3{
+      font-size: 4rem;
+      margin: 0;
+      padding: 0;
+      border-right: 0;
+      border-bottom: 2px solid #FFCB65;
+    }
+    p{
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+  @media(max-width: 400px){
+    h3{
+      font-size: 2.5rem;
+    }
+    p{
+      font-size: 0.925rem;
+    }
   }
 `
