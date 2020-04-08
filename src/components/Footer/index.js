@@ -22,7 +22,9 @@ const Footer = () => {
     <>
     <Container className="section">
       <Content className="grid">
-        <Logo fill={"#fff"} bleed={"#003D7A"}/>
+        <div className="logo-footer">
+          <Logo fill={"#fff"} bleed={"#003D7A"}/>
+        </div>
         <Card>
           <h3>Working Hours</h3>
           <ul>
