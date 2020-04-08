@@ -22,6 +22,11 @@ export const Content = styled.article`
   display: grid;
   grid-row-gap: 50px;
   grid-template-columns: repeat(2, 1fr);
+
+  @media(max-width:900px){
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const Card = styled.article`
@@ -83,6 +88,27 @@ export const Card = styled.article`
 
     .brief{
       line-height: 30px;
+    }
+  }
+  @media(max-width:900px){
+    margin-bottom: 50px;
+  }
+  @media(max-width:600px){
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @media(max-width:400px){
+    .image{
+      height: 200px;
+    }
+    .info-wrapper{
+      .info{
+        font-size: 11px;
+      }
+      .brief{
+        line-height: 20px;
+      }
+      margin-bottom: 10px;
     }
   }
 `
