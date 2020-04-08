@@ -91,6 +91,8 @@ export const Card = styled.article`
     }    
   }
   @media(max-width: 950px){
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 50px;
     div{
       .icon{

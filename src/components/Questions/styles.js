@@ -10,6 +10,10 @@ export const Container = styled.section`
   @media(max-width: 700px){
     height: 85vh;
   }
+  @media(max-width: 400px){
+    height: 100vh;
+    padding-bottom: 120px;
+  }
 `
 
 export const Content = styled.article`
@@ -79,6 +83,11 @@ export const Content = styled.article`
         height: 80px;
       }
     }
+  }
+  @media(max-width: 400px){
+    height: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 `
 
