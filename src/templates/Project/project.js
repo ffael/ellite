@@ -8,6 +8,7 @@ import { Container, Content, CallForActionBtn } from './styles'
 
 import SocialBar from '../../components/SocialBar'
 import Header from '../../components/Header'
+import MobileNav from '../../components/MobileNav'
 import Gallery from '../../components/Gallery'
 import GetQuote from '../../components/GetQuote'
 import Questions from '../../components/Questions'
@@ -63,7 +64,7 @@ const ProjectPage = (props)=>{
           {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet> 
       <GlobalStyles />
-      <SocialBar />
+      <MobileNav />
       <Header/>
       <Gallery gallery={props.data.project.gallery} featuredImage={props.data.project.featuredImage} maxHeight={600}/>
       <Container className="grid section-xl">

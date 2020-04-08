@@ -29,4 +29,7 @@ export const Container = styled.section`
       }
     }
   }
+  @media(max-width: 500px){
+    justify-content: center;
+  }
 `
