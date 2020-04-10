@@ -19,7 +19,7 @@ const About = ({mainPage = true}) =>{
 
   return(
     <Container>
-      {mainPage ? <h1>About</h1>: ""}
+      {/* {mainPage ? <h1>About</h1>: ""} */}
       <Content className="grid section-xl">
         <Card img={Img}>
           {/* Image */}

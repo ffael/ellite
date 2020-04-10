@@ -43,7 +43,7 @@ const Services = ({mainPage = true}) =>{
 
   return(
     <Container>
-      {mainPage ? <h1>Services</h1>: ""}
+      {/* {mainPage ? <h1>Services</h1>: ""} */}
       <Content className="grid section-xl" mainPage={mainPage}>
         { mainPage ? 
         data.homePage.edges.map((edge)=>{
