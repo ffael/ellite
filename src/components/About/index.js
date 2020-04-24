@@ -14,6 +14,11 @@ const About = ({mainPage = true}) =>{
           description
         }
       }
+      contentfulAsset(title: {eq: "about-featured"}) {
+        fluid {
+          src
+        }
+      }
     }
   `)
 
@@ -21,7 +26,7 @@ const About = ({mainPage = true}) =>{
     <Container>
       {/* {mainPage ? <h1>About</h1>: ""} */}
       <Content className="grid section-xl">
-        <Card img={Img}>
+        <Card img={data.contentfulAsset.fluid.src}>
           {/* Image */}
           <picture></picture> 
         </Card>
