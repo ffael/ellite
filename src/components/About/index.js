@@ -1,10 +1,6 @@
 import React from 'react'
-
 import { Container, Content, Card, CallForActionBtn } from './styles'
-
 import { useStaticQuery, graphql, Link } from 'gatsby'
-
-import Img from '../../assets/images/about.jpg'
 
 const About = ({mainPage = true}) =>{
   const data = useStaticQuery(graphql`
