@@ -29,7 +29,6 @@ const Services = ({mainPage = true}) =>{
           node{
             id
             title
-            brief
             description{
               description
             }
@@ -67,7 +66,7 @@ const Services = ({mainPage = true}) =>{
                 {/* <FaHardHat className="icon" size={25} fill="#CCA352"/> */}
               </div>
               <h3>{edge.node.title}</h3>
-              <p>{edge.node.description}</p>
+              <p>{edge.node.description.description}</p>
             </Card>
           )  
         })
