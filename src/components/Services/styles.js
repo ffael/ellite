@@ -101,7 +101,6 @@ export const Card = styled.article`
     }
   }
 `
-
 export const CallForActionBtn = styled.button`
   grid-column: 2;
   background: none;
@@ -123,5 +122,12 @@ export const CallForActionBtn = styled.button`
       color: #333;
       background: #777;
     }
+  }
+`
+export const Button = styled(CallForActionBtn)`
+  margin: 20px 0;
+  a{
+    font-size: 0.75rem;
+    padding: 10px 20px;
   }
 `

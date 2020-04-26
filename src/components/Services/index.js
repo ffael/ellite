@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { Container, Content, Card, CallForActionBtn } from './styles'
+import { Container, Content, Card, CallForActionBtn, Button } from './styles'
 import { FaHardHat } from 'react-icons/fa'
 
 import { Link } from 'gatsby'
@@ -16,6 +16,7 @@ const Services = ({mainPage = true}) =>{
             id
             title
             brief
+            slug
             image {
               file {
                 url
@@ -29,6 +30,7 @@ const Services = ({mainPage = true}) =>{
           node{
             id
             title
+            slug
             description{
               description
             }
@@ -56,6 +58,9 @@ const Services = ({mainPage = true}) =>{
               </div>
               <h3>{edge.node.title}</h3>
               <p>{edge.node.brief}</p>
+              <Button>
+                <Link className="box-shadow" to={`services/${edge.node.slug}`}>See More</Link>
+              </Button>
             </Card>
           )  
         }) : 
@@ -67,6 +72,9 @@ const Services = ({mainPage = true}) =>{
               </div>
               <h3>{edge.node.title}</h3>
               <p>{edge.node.description.description}</p>
+              <Button>
+                <Link className="box-shadow" to={`services/${edge.node.slug}`}>See More</Link>
+              </Button>
             </Card>
           )  
         })
