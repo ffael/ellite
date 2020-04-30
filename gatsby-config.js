@@ -8,15 +8,15 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Ellite Construction Inc.",
-    description: "My service is noteworthy for the quality, professionalism and dedication so that my company can stand out increasingly.    My job is done with love because I like to do what I do. I consider my work a work of art.",
+    description: "Ellite Construction Inc. has been in the residential construction business for years, always seeking to bring innovation and quality to its customers. Continuously valuing customer satisfaction and high-level quality service, Ellite Construction Inc. has got its place in Massachusetts as an acknowledged, expert and reliable company, trusted by numerous customers.",
     url: "https://www.elliteconstruction.best", // No trailing slash allowed!
-    address: "111 Main Street, Lowell - MA",
-    email: "carlos@elliteconstruction.best",
-    phone: "(111) 222-3344",
-    facebook:'https://www.facebook.com/profile.php?id=100001889841151',
+    address: "456 Westford Street, Lowell - MA",
+    email: "elliteconstruction@mail.com",
+    phone: "978-967-9426",
+    facebook:'https://www.facebook.com/elliteEC/',
     messenger:'',
     yelp:'',
-    instagram:'',
+    instagram:'https://www.instagram.com/elliteconstruction/',
     thumbtack:'https://www.thumbtack.com/ma/lowell/masonry-contractors/ellite-c-masonry/service/251671686336472287?service_pk=251671686336472287&lp_request_pk=382917887968624652&zip_code=01852&lp_path=%2Finstant-results%3Fcategory_pk%3D195542926149771771%26zip_code%3D01852&keyword_pk=235852884815022900&click_origin=pro%20list%2Fclick%20pro%20avatar&sourcePage=&sourceEvent=',
     icon: "src/assets/images/icon.png", // Path to your image you placed in the 'static' folder
   },
