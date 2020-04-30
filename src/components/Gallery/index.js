@@ -23,8 +23,8 @@ const Gallery = (props) =>{
     withoutControls: false,
     wrapAround: true,
     slidesToShow: 1,
-    transitionMode: "fade",
-    speed: 2000
+    // transitionMode: "fade",
+    speed: 1000
   }
 
 
