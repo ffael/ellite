@@ -29,10 +29,14 @@ export const Container = styled.section`
   user-select: none;
   background: #fff;
   display: flex;
-  height: 100px;
+  height: 120px;
   justify-content: space-between;
-  @media(max-width: 1200px){
-    align-items: center;
+  align-items: center;
+
+  h3{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #003D7A;
   }
 
   .navWrapper{
@@ -64,6 +68,7 @@ export const MainNav = styled.nav`
     }
 
     a{
+      font-size: 0.8125rem;
       text-decoration: none;
       color: inherit;
       font-style: italic;
@@ -79,14 +84,20 @@ export const MainNav = styled.nav`
 
 export const CallButton = styled.a`
   display: flex;
-  color: #fff;
   background-color: #003D7A;
-  font-size: 0.8rem;
-  text-transform: uppercase;
   padding: 10px 30px;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 20px;
+
+  span{
+    color: #fff;
+    display: block;
+    margin-left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
   &:hover{
     background: #3680A6;

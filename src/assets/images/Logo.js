@@ -1,8 +1,9 @@
 import React from "react";
 
 function SvgLogo(props) {
+  // width={170} height={96}
   return (
-  <svg id="logo" data-name="Logo - Ellite" xmlns="http://www.w3.org/2000/svg" width={170} height={96} viewBox="0 0 276.958 96.221">
+  <svg id="logo" data-name="Logo - Ellite" xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} viewBox="0 0 276.958 96.221">
   <g id="Group_9" data-name="Group 9">
     <g id="Group_3" data-name="Group 3">
       <path id="Path_1" data-name="Path 1" d="M89.012,25a48.111,48.111,0,1,0,48.111,48.111A48.11,48.11,0,0,0,89.012,25Z" transform="translate(-40.901 -25)" fill={props.fill}/>

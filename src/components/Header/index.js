@@ -7,7 +7,7 @@ import Social from '../SocialBar'
 import { HeaderWrapper, Container, MainNav, CallButton, TrayOpener } from './styles'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
-import { FaAlignRight } from 'react-icons/fa'
+import { FaAlignRight, FaPhone} from 'react-icons/fa'
 
 
 const Header = () =>{
@@ -28,8 +28,9 @@ const Header = () =>{
       <Social />
       <Container className="grid">
         <Link to="/">
-          <Logo className="logo" fill={"#002f7a"} bleed={"#fff"}/>
+          <Logo width={250} height={120} className="logo" fill={"#002f7a"} bleed={"#fff"}/>
         </Link>
+        {/* <h3>General Masonry</h3> */}
         <div className="navWrapper">
           <MainNav>
             <ul>
@@ -46,7 +47,10 @@ const Header = () =>{
               })}
             </ul>
           </MainNav>
-          <CallButton href="tel:+19785965350" className="box-shadow">Call Us</CallButton>
+          <CallButton href="tel:+19789679426" className="box-shadow">
+            <FaPhone color={"#fff"} />
+            <span>978-967-9426</span>
+          </CallButton>
         </div>
       <TrayOpener>
         <button type="button" onClick={() => { setNav(!nav) }}>
