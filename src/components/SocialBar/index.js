@@ -27,11 +27,11 @@ const SocialBar = () =>{
             <FaFacebookSquare />
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href={data.site.siteMetadata.yelp} target="_blank" rel="noopener noreferrer">
             <FaYelp />
           </a>
-        </li>
+        </li> */}
         <li>
           <a href={data.site.siteMetadata.instagram} target="_blank" rel="noopener noreferrer">
             <FaInstagram />
