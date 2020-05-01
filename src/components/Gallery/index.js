@@ -2,6 +2,7 @@ import React , { useEffect } from 'react'
 
 import Carousel from 'nuka-carousel'
 import Img from 'gatsby-image'
+import { FaCalculator } from 'react-icons/fa'
 
 
 const Gallery = (props) =>{
@@ -33,7 +34,7 @@ const Gallery = (props) =>{
       return
     }else{
       return(
-        <section style={{marginTop: 100}}>
+        <section style={{marginTop: 'calc(100px + 2%)'}}>
           <Carousel {...settings} style={ (props.border === true) ? {borderBottom: "20px solid #FFCB65"} : ""}>
             {props.gallery.map((item)=>{
               return(
