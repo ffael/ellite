@@ -34,25 +34,12 @@ export const query = graphql`
   }
 `
 const ServicePage = (props)=>{
-  const [currentImage, setCurrentImage] = useState(0)
-  const [viewerIsOpen, setViewerIsOpen] = useState(false)
   const photos = []
   if(props.data.service.gallery){
     props.data.service.gallery.map((item)=>{
       const { src, width, height } = item.fixed
       photos.push({src, width, height})
     })
-  }
-  
-  const openLightBox = useCallback((event, { photo, index })=>{
-    setCurrentImage(index)
-    setViewerIsOpen(true)
-    console.log(photo)
-  }, [])
-
-  const closeLightBox = () =>{
-    setCurrentImage(0)
-    setViewerIsOpen(false)
   }
   
   return(
