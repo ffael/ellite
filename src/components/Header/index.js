@@ -28,7 +28,7 @@ const Header = () =>{
       <Social />
       <Container className="grid">
         <Link to="/">
-          <Logo width={250} height={120} className="logo" fill={"#002f7a"} bleed={"#fff"}/>
+          <Logo width={'85%'} height={120} className="logo" fill={"#002f7a"} bleed={"#fff"}/>
         </Link>
         {/* <h3>General Masonry</h3> */}
         <div className="navWrapper">
@@ -58,6 +58,12 @@ const Header = () =>{
         </button>
       </TrayOpener>
       </Container>
+      <div className={'call'}>
+        <CallButton href="tel:+19789679426" className="box-shadow">
+          <FaPhone color={"#fff"} />
+          <span>978-967-9426</span>
+        </CallButton>
+      </div>
     </HeaderWrapper>
   )
 }

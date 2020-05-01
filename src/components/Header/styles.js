@@ -6,6 +6,22 @@ export const HeaderWrapper = styled.header`
   left: 0;
   width: 100vw;
   z-index: 100;
+  .call{
+    display: none;
+  }
+
+  @media(max-width: 1200px){
+    .call{
+      display: flex;
+      width: 100%;
+      a{
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        font-size: 20px;
+      }
+    }
+  }
 `
 
 export const TrayOpener = styled.section`

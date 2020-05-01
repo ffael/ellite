@@ -3,7 +3,7 @@ import { PageContext } from '../../context'
 import { Container, MainNav, CallButton } from './styles'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
-import { FaRegWindowClose } from 'react-icons/fa'
+import { FaRegWindowClose, FaPhone } from 'react-icons/fa'
 
 const MobileNav = () =>{
   const { nav, setNav } = useContext(PageContext)
@@ -36,7 +36,10 @@ const MobileNav = () =>{
           })}
        </ul>
      </MainNav>
-     <CallButton href="tel:+19785965350" className="box-shadow">Call Us</CallButton>
+     <CallButton href="tel:+19789679426" className="box-shadow">
+        <FaPhone color={"#fff"} />
+        <span>978-967-9426</span>
+      </CallButton>
       <button type="button" onClick={()=> { setNav(false) }}>
         <FaRegWindowClose size={30} />
       </button>

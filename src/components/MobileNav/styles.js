@@ -61,16 +61,21 @@ export const MainNav = styled.nav`
 export const CallButton = styled.a`
   display: flex;
   justify-content: center;
-  width: 20%;
+  align-items: center;
+  width: 50%;
   color: #fff;
   background-color: #003D7A;
-  font-size: 0.8rem;
   text-transform: uppercase;
   padding: 10px 30px;
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: bold;
   margin-bottom: 30px;
+  
+  span{
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
 
   &:hover{
     background: #3680A6;
