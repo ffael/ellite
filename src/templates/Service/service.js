@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql, prefetchPathname } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import { FaArrowLeft } from 'react-icons/fa'
 import { Container, Content, CallForActionBtn } from './styles'
@@ -34,6 +34,8 @@ export const query = graphql`
   }
 `
 const ServicePage = (props)=>{
+  const [currentImage, setCurrentImage] = useState(0)
+  const [viewerIsOpen, setViewerIsOpen] = useState(false)
   const photos = []
   if(props.data.service.gallery){
     props.data.service.gallery.map((item)=>{
@@ -41,6 +43,18 @@ const ServicePage = (props)=>{
       photos.push({src, width, height})
     })
   }
+  
+  const openLightBox = useCallback((event, { photo, index })=>{
+    setCurrentImage(index)
+    setViewerIsOpen(true)
+    console.log(photo)
+  }, [])
+
+  const closeLightBox = () =>{
+    setCurrentImage(0)
+    setViewerIsOpen(false)
+  }
+  
   return(
     <Layout title="Services" fileName="services-hero">   
       <Container className="grid section-xl">
@@ -58,10 +72,12 @@ const ServicePage = (props)=>{
             <p>{props.data.service.description.description}</p>
           </section>
         </Content>
-        {console.log(props.data.service.gallery)}
-        { props.data.service.gallery !== null ? 
-        <Gallery photos={photos} direction={"column"} />
-        : ''}
+        <Gallery photos={photos} direction={"column"}/>
+        {/* { props.data.service.gallery !== null ? 
+          <>
+            
+          </>
+        : ''} */}
       </Container>      
     </ Layout>
   )
