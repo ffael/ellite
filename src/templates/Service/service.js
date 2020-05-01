@@ -35,8 +35,6 @@ export const query = graphql`
   }
 `
 const ServicePage = (props)=>{
-<<<<<<< HEAD
-=======
   const [currentImage, setCurrentImage] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -50,16 +48,11 @@ const ServicePage = (props)=>{
     setCurrentImage(0)
   }
 
->>>>>>> feat/modal
   const photos = []
-  const images = []
   if(props.data.service.gallery){
     props.data.service.gallery.map((item)=>{
       const { src, width, height } = item.fixed
       photos.push({src, width, height})
-      images.push({
-        source: src
-      })
     })
   }
   
