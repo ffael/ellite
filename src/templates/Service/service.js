@@ -52,7 +52,7 @@ const ServicePage = (props)=>{
   if(props.data.service.gallery){
     props.data.service.gallery.map((item)=>{
       const { src, width, height } = item.fixed
-      photos.push({src, width, height})
+      return photos.push({src, width, height})
     })
   }
   
@@ -74,8 +74,7 @@ const ServicePage = (props)=>{
           </section>
         </Content>
         <Gallery photos={photos} direction={"column"} onClick={openLightbox}/>
-        
-          
+
         <ModalGateway>
           {isModalOpen ? 
             <Modal onClose={()=> handleClose()} closeOnEsc={true}>

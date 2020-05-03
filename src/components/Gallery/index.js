@@ -2,8 +2,6 @@ import React , { useEffect } from 'react'
 
 import Carousel from 'nuka-carousel'
 import Img from 'gatsby-image'
-import { FaCalculator } from 'react-icons/fa'
-
 
 const Gallery = (props) =>{
   useEffect(()=>{
