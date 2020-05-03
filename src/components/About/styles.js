@@ -102,11 +102,4 @@ export const CallForActionBtn = styled.button`
       background: #777;
     }
   }
-
-  @media(max-width: 400px){
-    a{
-     font-size: 0.6875rem;
-     padding: 15px 35px !important;
-    }
-  }
 `
