@@ -5,7 +5,7 @@ import { PageContext } from '../../context'
 
 import { Parallax } from 'react-parallax'
 
-import { Container, Content } from './styles'
+import { Wrapper, Container, Content } from './styles'
 
 const HeroPage = () =>{
   const context = useContext(PageContext)
@@ -36,7 +36,7 @@ const HeroPage = () =>{
   })
 
   return(
-    <section style={{marginTop: 150}}>
+    <Wrapper>
     <Parallax
       blur={2}
       bgImage={bg}
@@ -44,12 +44,12 @@ const HeroPage = () =>{
     >
       <Container>
         <Content className="grid">
-        <h3 onClick={()=> {console.log(context)}}>{context.title}</h3>
+        <h3>{context.title}</h3>
         <p>Delivering results every phase of the project.</p>
         </Content>
       </Container>
     </Parallax>
-    </section>
+    </Wrapper>
   )
 }
 

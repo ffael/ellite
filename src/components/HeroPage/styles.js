@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 
+export const Wrapper = styled.section`
+  margin-top: 150px;
+
+  @media (max-width: 1200px){
+    margin-top: 220px;
+  }
+`
+
 export const Container = styled.section`
   display: flex;
   width: 100%;
