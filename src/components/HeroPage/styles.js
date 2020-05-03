@@ -4,7 +4,7 @@ export const Wrapper = styled.section`
   margin-top: 150px;
 
   @media (max-width: 1200px){
-    margin-top: 220px;
+    margin-top: 200px;
   }
 `
 
