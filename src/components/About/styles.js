@@ -86,10 +86,8 @@ export const CallForActionBtn = styled.button`
   background: none;
   outline:none;
   border: none;
-  /* display: ${props => props.visible ? "block": "none"}; */
 
   a{
-    /* display: ${props => props.visible ? "inline-block": "none"}; */
     background:#FFCB65;
     padding: 20px 40px;
     text-decoration: none;
@@ -108,7 +106,7 @@ export const CallForActionBtn = styled.button`
   @media(max-width: 400px){
     a{
      font-size: 0.6875rem;
-     padding: 15px 35px;
+     padding: 15px 35px !important;
     }
   }
 `
