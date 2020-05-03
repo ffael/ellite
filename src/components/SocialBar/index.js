@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useStaticQuery, graphql } from 'gatsby'
 
-import {FaFacebookSquare, FaYelp, FaInstagram, FaThumbtack} from 'react-icons/fa'
+import {FaFacebookSquare, FaInstagram, FaThumbtack, FaLink} from 'react-icons/fa'
 import { Container } from './styles'
 
 const SocialBar = () =>{
@@ -12,7 +12,7 @@ const SocialBar = () =>{
         siteMetadata{
           facebook,
           messenger,
-          yelp,
+          qrgtech,
           thumbtack,
           instagram
         }
@@ -21,17 +21,17 @@ const SocialBar = () =>{
   `)
   return(
     <Container className="grid">
-      <ul>
+      <ul role="navigation" aria-label="External Links">
         <li>
           <a href={data.site.siteMetadata.facebook} target="_blank" rel="noopener noreferrer">
             <FaFacebookSquare />
           </a>
         </li>
-        {/* <li>
-          <a href={data.site.siteMetadata.yelp} target="_blank" rel="noopener noreferrer">
-            <FaYelp />
+        <li>
+          <a href={data.site.siteMetadata.qrgtech} target="_blank" rel="noopener noreferrer">
+            <FaLink />
           </a>
-        </li> */}
+        </li>
         <li>
           <a href={data.site.siteMetadata.instagram} target="_blank" rel="noopener noreferrer">
             <FaInstagram />

@@ -15,7 +15,7 @@ module.exports = {
     phone: "978-967-9426",
     facebook:'https://www.facebook.com/elliteEC/',
     messenger:'',
-    yelp:'',
+    qrgtech:'https://www.qrgtech.com/4867-masonry-repair-contractor-andover-ma',
     instagram:'https://www.instagram.com/elliteconstruction/',
     thumbtack:'https://www.thumbtack.com/ma/lowell/masonry-contractors/ellite-c-masonry/service/251671686336472287?service_pk=251671686336472287&lp_request_pk=382917887968624652&zip_code=01852&lp_path=%2Finstant-results%3Fcategory_pk%3D195542926149771771%26zip_code%3D01852&keyword_pk=235852884815022900&click_origin=pro%20list%2Fclick%20pro%20avatar&sourcePage=&sourceEvent=',
     icon: "src/assets/images/icon.png", // Path to your image you placed in the 'static' folder
