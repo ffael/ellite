@@ -6,6 +6,7 @@ export const Container = styled.footer`
   background: #003D7A;
   border-top: 40px solid #333;
   user-select: none;
+  width: 100vw;
 
   .copy-right{
     display: flex;
@@ -23,6 +24,9 @@ export const Content = styled.article`
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: space-between;
+  .logo-footer{
+    max-width: 400px;
+  }
 
   @media(max-width: 1200px){
     grid-column-gap: 40px;

@@ -29,7 +29,7 @@ const MobileNav = () =>{
                 { item === 'Home' ?
                   <Link to='/' activeClassName="active-item">{item}</Link>
                   :
-                  <Link to={`${item.toLowerCase()}`} activeClassName="active-item">{item}</Link>
+                  <Link to={`/${item.toLowerCase()}`} activeClassName="active-item">{item}</Link>
                   }
               </li>
             )

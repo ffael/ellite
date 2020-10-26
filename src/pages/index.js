@@ -42,13 +42,15 @@ const IndexPage = ({title, main}) =>{
         </Helmet>
         <MobileNav />
         <GlobalStyles />
+        <div style={{width: '100vw'}}>
         <Header />
-        <Gallery gallery={data.contentfulMainHero.gallery} border={false} />
-        <GetQuote />
-        <Services mainPage={true}/>
-        <Questions />
-        <About mainPage={true} />
-        <Footer />
+          <Gallery gallery={data.contentfulMainHero.gallery} border={false} />
+          <GetQuote />
+          <Services mainPage={true}/>
+          <Questions />
+          <About mainPage={true} />
+          <Footer />
+        </div>
       </PageContext.Provider>
     </>
   )

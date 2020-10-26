@@ -35,12 +35,13 @@ const Header = () =>{
           <MainNav>
             <ul>
               { allContentfulMenu.edges[0].node.items.map((item)=>{
+                console.log(item.toLowerCase())
                 return(
                   <li  key={item} >
                     { item === 'Home' ?
                       <Link to='/' activeClassName="active-item">{item}</Link>
                      :
-                      <Link to={`${item.toLowerCase()}`} activeClassName="active-item">{item}</Link>
+                      <Link to={`/${item.toLowerCase()}`} activeClassName="active-item">{item}</Link>
                      }
                   </li>
                 )

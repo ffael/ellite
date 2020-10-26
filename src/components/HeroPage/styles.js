@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.section`
   margin-top: 150px;
-
+  width: 100vw;
   @media (max-width: 1200px){
     margin-top: 200px;
   }

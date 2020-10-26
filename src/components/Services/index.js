@@ -59,7 +59,7 @@ const Services = ({mainPage = true}) =>{
               <h3>{edge.node.title}</h3>
               <p>{edge.node.brief}</p>
               <Button>
-                <Link className="box-shadow" to={`services/${edge.node.slug}`}>See More</Link>
+                <Link className="box-shadow" to={`/services/${edge.node.slug}`}>See More</Link>
               </Button>
             </Card>
           )  
@@ -73,7 +73,7 @@ const Services = ({mainPage = true}) =>{
               <h3>{edge.node.title}</h3>
               <p>{edge.node.description.description}</p>
               <Button>
-                <Link className="box-shadow" to={`services/${edge.node.slug}`}>See More</Link>
+                <Link className="box-shadow" to={`/services/${edge.node.slug}`}>See More</Link>
               </Button>
             </Card>
           )  

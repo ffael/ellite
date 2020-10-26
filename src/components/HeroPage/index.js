@@ -1,22 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext } from "react"
 
-import { useStaticQuery, graphql } from 'gatsby'
-import { PageContext } from '../../context'
+import { useStaticQuery, graphql } from "gatsby"
+import { PageContext } from "../../context"
 
-import { Parallax } from 'react-parallax'
+import { Parallax } from "react-parallax"
 
-import { Wrapper, Container, Content } from './styles'
+import { Wrapper, Container, Content } from "./styles"
 
-const HeroPage = () =>{
+const HeroPage = () => {
   const context = useContext(PageContext)
   let bg
   const data = useStaticQuery(graphql`
-    query{
-      allContentfulAsset{
-        edges{
-          node{
+    query {
+      allContentfulAsset {
+        edges {
+          node {
             title
-            fluid(maxWidth: 2000){
+            fluid(maxWidth: 2000) {
               src
             }
           }
@@ -25,30 +25,24 @@ const HeroPage = () =>{
     }
   `)
 
-  data.allContentfulAsset.edges.map((edge)=>{
-    if(edge.node.title !== context.fileName){
+  data.allContentfulAsset.edges.map(edge => {
+    if (edge.node.title !== context.fileName) {
       return bg
-    }else{
-      return(
-        bg = edge.node.fluid.src
-      )
+    } else {
+      return (bg = edge.node.fluid.src)
     }
   })
 
-  return(
+  return (
     <Wrapper>
-    <Parallax
-      blur={2}
-      bgImage={bg}
-      strength={500}
-    >
-      <Container>
-        <Content className="grid">
-        <h3>{context.title}</h3>
-        <p>Delivering results every phase of the project.</p>
-        </Content>
-      </Container>
-    </Parallax>
+      <Parallax blur={2} bgImage={bg} strength={500}>
+        <Container>
+          <Content className="grid">
+            <h3>{context.title}</h3>
+            <p>Delivering results every phase of the project.</p>
+          </Content>
+        </Container>
+      </Parallax>
     </Wrapper>
   )
 }

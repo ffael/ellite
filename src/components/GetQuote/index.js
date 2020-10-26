@@ -9,7 +9,7 @@ const GetQuote = () =>{
       <Content className="grid">
         <p>Fast and Reliable Services You Can Trust.</p>
         <CallButton className="box-shadow">
-          <Link to='/'>Get a Quote</Link>
+          <Link to='/contact'>Get a Quote</Link>
         </CallButton>
       </Content>
     </Container>

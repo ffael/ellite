@@ -33,7 +33,7 @@ const Layout = ({children, title, main, fileName}) =>{
         <GlobalStyles />
         <Header />
         <HeroPage />
-        <main>
+        <main style={{width: '100vw'}}>
           {children}
         </main>
         <Footer />
