@@ -10,7 +10,7 @@ module.exports = {
     title: "Ellite Construction Inc.",
     description: "Ellite Construction Inc. has been in the residential construction business for years, always seeking to bring innovation and quality to its customers. Continuously valuing customer satisfaction and high-level quality service, Ellite Construction Inc. has got its place in Massachusetts as an acknowledged, expert and reliable company, trusted by numerous customers.",
     url: "https://www.elliteconstruction.best", // No trailing slash allowed!
-    address: "456 Westford Street, Lowell - MA",
+    address: "1081 Mammoth Rd, Dracut, MA 01826",
     email: "ellitecmasonry@gmail.com",
     phone: "978-967-9426",
     facebook:'https://www.facebook.com/elliteEC/',
